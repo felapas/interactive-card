@@ -1,0 +1,420 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Estilos padrao */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+/*Organização do documento*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.decoration {
+  width: 100%;
+  max-width: 40vw;
+  height: 100vh;
+  background-repeat: repeat-y;
+  background-image: url(images/bg-main-desktop.png);
+} 
+
+
+
+.container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cards{
+  max-width: 100%;
+  position: relative;
+  top: 50%;
+  left: 0%;
+}
+
+
+/* Card Front */
+
+.card-front {
+  width: 100%;
+  max-width: 23.75rem;
+  height: 14.375rem;
+  background: url(images/bg-card-front.png);
+  background-size: cover;
+  border-radius: 0.625rem;
+  z-index: 2;
+  overflow: hidden;
+  backdrop-filter: blur(0.3125rem);
+  -webkit-backdrop-filter: blur(0.3125rem);
+  position: relative;
+  bottom: 14rem;
+  left: 12rem;
+}
+
+.card-expdate{
+  display: flex;
+  gap: 0.0625rem;
+}
+
+.logo-front {
+  padding: 0.625rem;
+}
+
+.logo-front img {
+  width: 4.375rem;
+  height: 2.5rem;
+}
+
+.number-front {
+  padding: 0.625rem;
+  margin: 1.875rem 0;
+}
+
+.number-front img {
+  width: 3.75rem;
+  height: 2.8125rem;
+}
+
+.number-front p {
+  font-size: 1.625rem;
+  padding: 0.625rem 0;
+  letter-spacing: 0.15625rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.name-valid-front {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.625rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 1.5625rem;
+  margin-left: 0.3125rem;
+  font-size: 0.9375rem;
+}
+
+/* Card Back */
+
+.card-back {
+  width: 23.75rem;
+  height: 14.375rem;
+  background: url(images/bg-card-back.png);
+  background-size: cover;
+  background-position-x: center;
+  border-radius: 0.625rem;
+  z-index: 1;
+  overflow: hidden;
+  backdrop-filter: blur(0.3125rem);
+  -webkit-backdrop-filter: blur(0.3125rem);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 10rem;
+  left: 15rem;
+}
+
+.card-cvc {
+  position: relative;
+  color: #fff;
+  right: 3.125rem;
+  font-size: 0.9375rem;;
+}
+
+
+.bg-main {
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+/*Estilos dos formularios*/
+
+.inputs {
+  display: flex;
+  width: 60vw;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 50%;
+}
+
+form label {
+  color: hsl(278, 68%, 11%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.125rem;
+  margin-bottom: 0.3125rem;
+
+}
+
+
+form input {
+  border: 1px solid hsl(270, 3%, 87%);
+  width: 100%;
+  height: 2.5rem;
+  border-radius: .5rem;
+  padding: 1rem;
+  transition: all 0.5s ease 0s;
+  color: hsl(278, 68%, 11%);
+  font-size: 1rem;
+}
+
+form input:focus {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  border-radius: .5rem;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+form input::placeholder {
+  font-size: 1rem;
+  color: hsl(270, 3%, 87%);
+}
+
+
+.form-name {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-expdate-cvc {
+  display: flex;
+
+}
+
+.form-expdate {
+  width: 100%;
+}
+
+.form-cvc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.form-expdate {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvc-input input {
+  width: 100%;
+  height: 100%;
+}
+
+.exp-date-input{
+  display: flex;
+}
+
+.exp-date-input input {
+  width: 5rem;
+}
+
+form button {
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  height: 3.5rem;
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+
+form button h2 {
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.input-control{
+  width: 100%;
+}
+
+.error{
+  border-color: hsl(0, 100%, 66%);
+}
+
+.error-msg{
+
+  color: hsl(0, 100%, 66%);
+  font-size: .7rem;
+  height: .5rem;
+}
+
+
+.container{
+  max-width: 60vw;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Estilos do formulario enviado*/
+
+.completed-state{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+.button-continue{
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  height: 3.5rem;
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+  width: 100%;
+
+}
+
+.button-continue h2 {
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  margin-bottom: 0.125rem;
+}
+
+.completed-state h1{
+  color: hsl(278, 68%, 11%);
+}
+
+.completed-state p{
+  color: hsl(279, 6%, 55%);
+}
+
+
+/* media queries */
+
+@media (min-width:1800px) and (orientation:landscape){
+  html {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1200px) and (orientation:landscape) {
+  html {
+    font-size: 14px;
+  }
+
+  .card-front{
+    left: 8rem;
+  }
+  .card-back{
+    left: 10rem;
+  }
+}
+
+@media (max-width: 1000px) and (orientation:landscape) {
+  html {
+    font-size: 12px;
+  }
+
+  
+}
+@media (max-width: 780px) and (orientation:landscape) {
+  html {
+    font-size: 10px;
+  }
+
+
+
+ 
+}
+
+@media (max-width:450px) and (orientation: portrait){
+
+  html{
+    font-size:12px;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .decoration {
+    width: 100%;
+    max-width: 100vw;
+    height: 30vh;
+    background-repeat: repeat-x;
+    background-image: url(images/bg-main-desktop.png);
+  } 
+  
+  
+  
+  .container {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .cards{
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+  }
+  
+  .card-front{
+    bottom: 0;
+    left: -14rem;
+  }
+  .card-back{
+    bottom: 23rem;
+    left: -30%;
+  }
+
+  .inputs{
+    width: 100vw;
+    height: 60vh;
+  }
+
+  form{
+    width: 80%;
+  }
+  
+}
+
+
