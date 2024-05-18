@@ -15,7 +15,7 @@
 
     main {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: no-wrap;
     }
     /* Card Front */
 
@@ -284,6 +284,7 @@ form button h2 {
   color: hsl(0, 100%, 66%);
   font-size: .7rem;
   height: .5rem;
+  margin-bottom: 5px;
 }
 /*Estilos do formulario enviado*/
 
@@ -369,8 +370,8 @@ form button h2 {
   
   .card-front{
     position: relative;
-    left: 11.25rem;
-    bottom: -5rem;
+    left: 20vw;
+    bottom: -15vh;
     
   }
   .card-back{
